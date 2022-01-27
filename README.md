@@ -6,7 +6,7 @@ The original of this project is:
 - TM1637 from https://github.com/mcauser/micropython-tm1637
 
 #Hardware list:
-- Wemos D1 Mini
+- Wemos D1 Mini with micropython
 - TM1637 clock seven segment diplay
 - Jumper wires
 
