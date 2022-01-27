@@ -1,7 +1,7 @@
 # ESP8266 MicroPython Web Clock
 # by Alan Wang
 # Modified by Dan Anderson
-# Add some topping by anurkholis
+# Add some toppings by @anurkholis
 
 import tm1637,network, time, machine, konek, ntptime 
 from machine import RTC,Pin
@@ -27,12 +27,11 @@ def sinkronisasi():
   waktu=rtc.datetime()
   jam=waktu[4]+7
   print("berhasil sinkronisasi")
-  nextsinkron=jam+5
+  nextsinkron=jam+5   #sync after 5 hr later
 
   print("sinkronisasi selanjutnya pukul: ",nextsinkron)
 
 sinkronisasi()
-
 
 # main loop
 while True:
@@ -45,7 +44,8 @@ while True:
   tanggal=waktu[2]
   
   print(tanggal,"/",bulan, " ",jam,":",menit)
-  #Push numbers to display
+  
+  #Push numbers to display with level 2 brightness 
   tm.brightness(2)
   for x in range(5):
     tm.numbers(jam, menit, True)
