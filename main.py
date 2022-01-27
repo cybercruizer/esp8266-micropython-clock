@@ -18,7 +18,7 @@ rtc = RTC()
 konek.connect()
 station = network.WLAN(network.STA_IF)
 if station.isconnected() == True:
-  tm.scroll('inet OK') # 4 fps
+  tm.scroll('inet ok') # 4 fps
 nextsinkron=0
 # set timer
 def sinkronisasi():
